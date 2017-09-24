@@ -47,8 +47,8 @@ data$Time<-strptime(paste(data$Date,data$Time),format = "%Y-%m-%d %H:%M:%S")
 ## Plot 4
 
 par(mfrow=c(2,2))
-hist(data$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
 plot(data$Time,data$Global_active_power,xlab="",ylab="Global Active Power (kilowatts)", type="l")
+plot(data$Time,data$Voltage,ylab="Voltage",xlab="dateTime",type="l")
 plot(data$Time,data$Sub_metering_1,xlab="",ylab="Energy sub metering",type="n")
 points(data$Time,data$Sub_metering_1,type="l")
 points(data$Time,data$Sub_metering_2,col="red",type="l")
