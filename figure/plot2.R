@@ -46,5 +46,5 @@ data$Time<-strptime(paste(data$Date,data$Time),format = "%Y-%m-%d %H:%M:%S")
 ## Plot 2
 
 plot(data$Time,data$Global_active_power,xlab="",ylab="Global Active Power (kilowatts)", type="l")
-dev.copy(png,file="plot2.png")
+dev.copy(png,file="plot2.png",width=480,height=480)
 dev.off()
